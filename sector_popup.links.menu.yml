@@ -1,0 +1,9 @@
+sector_popup.create:
+  title: 'Sector Popup Form.'
+  route_name: sector_popup.create
+  parent: system.admin_config_media
+  expanded: TRUE
+
+sector_popup.manage:
+  route_name: sector_popup.manage
+  parent: system.admin_config_media

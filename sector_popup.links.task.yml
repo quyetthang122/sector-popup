@@ -1,0 +1,9 @@
+sector_popup.create:
+  title: 'Create new pop up'
+  route_name: sector_popup.create
+  base_route: sector_popup.create
+
+sector_popup.manage:
+  title: 'Manage all popups'
+  route_name: sector_popup.manage
+  base_route: sector_popup.create

@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Instrall, update and uninstrall functions for sector pop up.
+ */
+
+/**
+ * Implement hook_schema.
+ */
+function sector_popup_schema() {
+  $schema['sector_popup'] = [
+    'description' => 'Store sector_popup database.',
+    'fields' => [
+      'pid' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique sector_popup id',
+      ],
+      'page_node' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'enable form.',
+      ],
+      'popup_type' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+        'default' => '',
+        'description' => 'Pop up form type',
+      ],
+      'img' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+        'default' => '',
+        'description' => 'image for pop up form',
+      ],
+      'button_name' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+        'default' => '',
+        'description' => 'Pop up button',
+      ],
+      'link_target' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+        'default' => '',
+        'description' => 'Pop up link',
+      ],
+      'content_1' => [
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+        'description' => 'left form description for the pop up.',
+      ],
+      'content_2' => [
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+        'description' => 'right content for the pop up form.',
+      ],
+      'json' => [
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+        'description' => 'json value',
+      ],
+      'status' => [
+        'type' => 'int',
+        'not null' => FALSE,
+        'description' => 'enable form.',
+      ],
+    ],
+    'primary key' => ['pid'],
+  ];
+  return $schema;
+}
