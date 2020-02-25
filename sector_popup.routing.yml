@@ -1,0 +1,38 @@
+sector_popup.create:
+  path: 'admin/config/media/sector_popup/create'
+  defaults:
+    _title: 'Create New Popup'
+    _form: '\Drupal\sector_popup\Form\SectorPopupCreateForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+sector_popup.manage:
+  path: 'admin/config/media/sector_popup/manage'
+  defaults:
+    _title: 'Manage all Popup form'
+    _controller: '\Drupal\sector_popup\Controller\SectorPopupController::manageAllPopups'
+  requirements:
+    _permission: 'administer site configuration'
+
+sector_popup.delete:
+  path: 'admin/config/media/sector_popup/delete/{pid}'
+  defaults:
+    _controller: '\Drupal\sector_popup\Controller\SectorPopupController::deletePopup'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+    no_cache: 'TRUE'
+
+sector_popup.edit:
+  path: 'admin/config/media/sector_popup/edit/{pid}'
+  defaults:
+    _form: '\Drupal\sector_popup\Form\SectorPopupEditForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+    no_cache: 'TRUE'
+
